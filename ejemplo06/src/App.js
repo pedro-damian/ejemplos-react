@@ -1,9 +1,8 @@
 import React from "react";
 
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom"; 
-import Home from "./Home";
-import About from "./About";
-import Contact from "./Contact";
+
+
 
 
 const App = () => {
@@ -13,17 +12,17 @@ const App = () => {
         <nav>
           <ul>
             <li><Link to="/">Inicio</Link></li>
-            <li><Link to="/about">Sobre de</Link></li>
-            <li><Link to="/contact">Contacto</Link></li>
+            <li><Link to="/blog">Blog</Link></li>
+            <li><Link to="/contacto">Contacto</Link></li>
           </ul>
         </nav>
 
         {/* contenedor de Route */}
         <Routes>
           {/* define las las rutas */}
-          <Route path="/" element= {<Home/>} />
-          <Route path="/about" element={<About/>} />
-          <Route path="/contact" element= {<Contact/>} />
+          <Route path="/" element= {<Inicio/>} />
+          <Route path="/blog" element={<Blog/>} />
+          <Route path="/contacto" element= {<Contacto/>} />
         </Routes>
 
       </div>
