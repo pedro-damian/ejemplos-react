@@ -3,7 +3,8 @@ import React from "react";
 const Contacto = () => {
     return(
         <div>
-            <h1>Pagina Contacto</h1>
+             <h1>Contacto</h1>
+             <p>Contáctanos a través del formulario</p>
         </div>
     );
 }

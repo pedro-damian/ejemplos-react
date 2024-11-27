@@ -1,31 +1,27 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import Inicio from "./components/Inicio";
+import Blog from "./components/Blog";
+import Post from "./components/Post";
+import Contacto from "./components/Contacto";
+import Error404 from "./components/Error404";
+import Header from "./components/Header";
 
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom"; 
-
-
-
-
-const App = () => {
+function App() {
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li><Link to="/">Inicio</Link></li>
-            <li><Link to="/blog">Blog</Link></li>
-            <li><Link to="/contacto">Contacto</Link></li>
-          </ul>
-        </nav>
+        <Header/>
 
         {/* contenedor de Route */}
         <Routes>
           {/* define las las rutas */}
           <Route path="/" element= {<Inicio/>} />
           <Route path="/blog" element={<Blog/>} />
+          <Route path="/blog/:id" element= {<Post/>} />
           <Route path="/contacto" element= {<Contacto/>} />
+          <Route path="*" element= {<Error404/>} />
         </Routes>
 
-      </div>
     </Router>
   );
 };
