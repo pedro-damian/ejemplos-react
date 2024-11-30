@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./App.css";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom"; 
 import Home from "./Home";
 import About from "./About";
@@ -9,23 +9,28 @@ import Contact from "./Contact";
 const App = () => {
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li><Link to="/">Inicio</Link></li>
-            <li><Link to="/about">Sobre de</Link></li>
-            <li><Link to="/contact">Contacto</Link></li>
+      <div className={styles.container}>
+        <nav className={styles.navigation}>
+          <ul className={styles.navList}>
+            <li className={styles.navItem}>
+              <Link to="/" className={styles.navLink}>Inicio</Link>
+            </li>
+            <li className={styles.navItem}>
+              <Link to="/about" className={styles.navLink}>Sobre de</Link>
+            </li>
+            <li className={styles.navItem}>
+              <Link to="/contact" className={styles.navLink}>Contacto</Link>
+            </li>
           </ul>
         </nav>
 
-        {/* contenedor de Route */}
-        <Routes>
-          {/* define las las rutas */}
-          <Route path="/" element= {<Home/>} />
-          <Route path="/about" element={<About/>} />
-          <Route path="/contact" element= {<Contact/>} />
-        </Routes>
-
+        <main className={styles.mainContent}>
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/about" element={<About/>} />
+            <Route path="/contact" element={<Contact/>} />
+          </Routes>
+        </main>
       </div>
     </Router>
   );
