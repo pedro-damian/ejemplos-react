@@ -12,8 +12,6 @@ function App() {
     <Router>
         <Header/>
 
-        <hr></hr>
-
         {/* contenedor de Route */}
         <Routes>
           {/* define las las rutas */}

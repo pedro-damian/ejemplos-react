@@ -1,6 +1,6 @@
-import React from "react";
-import "./App.css";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom"; 
+import React from "react";
+import styles from "./App.module.css";
 import Home from "./Home";
 import About from "./About";
 import Contact from "./Contact";
